@@ -1,2 +1,10 @@
+<h1>Notes Diary</h1>
 <app-note-create></app-note-create>
 <app-note-list></app-note-list>
+<section class="logs-section">
+    <ul>
+        @for(msg of logMessages; track msg){
+            <li>{{msg}}</li>
+        }
+    </ul>
+</section>
