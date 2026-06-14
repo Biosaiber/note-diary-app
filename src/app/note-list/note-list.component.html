@@ -1,0 +1,11 @@
+<p>note-list works!</p>
+<ul>
+@for (note of notes; track note; let idx = $index) {
+    <li>
+        <div class="note-item">
+            <summary>{{note.date}}</summary>
+            <p>{{note.content}}</p>
+        </div>
+    </li>
+}
+</ul>

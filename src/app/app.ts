@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NoteCreateComponent } from './note-create/note-create.component';
+import { NoteListComponent } from './note-list/note-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [NoteCreateComponent, NoteListComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
