@@ -11,23 +11,24 @@ import { FormsModule } from '@angular/forms';
 })
 export class NoteCreateComponent {
   noteContent = '';
-  noteDate = '';
+  noteDate = new Date().toISOString().split('T')[0];
   private noteService = inject(NoteService);
 
   addNote(): void {
 
     if (this.noteContent.trim() && this.noteDate) {
-          //1. vytvoriť objekt Note
+      //1. vytvoriť objekt Note
       const newNote: Note = {
         content: this.noteContent,
         date: this.noteDate
       }
       //2. by sa mala volat funnkcia so service
       this.noteService.addNote(newNote);
+      this.noteContent = '';
+      this.noteDate = new Date().toISOString().split('T')[0];
 
     }
-    
-    //3. vyčistiť formulár
+
   }
 
 
