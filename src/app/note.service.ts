@@ -18,5 +18,9 @@ export class NoteService {
   getNotes(): Note[] {
     return [...this.notes]
   }
+  //delete note
+  deleteNote(idx:number):void {
+    this.notes.splice(idx, 1);
+  }
   
 }

@@ -5,6 +5,7 @@
         <div class="note-item">
             <summary>{{note.date}}</summary>
             <p>{{note.content}}</p>
+            <button (click)="deleteNote(idx)">Delete Note</button>
         </div>
     </li>
 }

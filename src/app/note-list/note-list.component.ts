@@ -10,13 +10,19 @@ import { Note } from '../note.interface';
 })
 export class NoteListComponent implements OnInit, DoCheck {
   private noteService = inject(NoteService);
-  notes: Note[]  = [];
+  notes: Note[] = [];
 
   ngOnInit() {
     this.notes = this.noteService.getNotes();
   }
   ngDoCheck() {
     this.notes = this.noteService.getNotes();
+  }
+  deleteNote(idx: number): void {
+    if (idx >= 0 && idx < this.notes.length) {
+      this.noteService.deleteNote(idx);
+    }
+
   }
 
 }
