@@ -1,10 +1,21 @@
-<h1>Notes Diary</h1>
-<app-note-create></app-note-create>
-<app-note-list></app-note-list>
-<section class="logs-section">
-    <ul>
-        @for(msg of logMessages; track msg){
-            <li>{{msg}}</li>
-        }
-    </ul>
-</section>
+<div class="container" [class.dark-theme]="currentTheme === 'dark'" [class.light-theme]="currentTheme === 'light'">
+    <div class="center-content" [class.dark-theme]="currentTheme === 'dark'"
+        [class.light-theme]="currentTheme === 'light'">
+
+        <div class="header">
+            <h1 [class.dark-theme]="currentTheme === 'dark'" [class.light-theme]="currentTheme === 'light'">
+                Notes Diary App
+            </h1>
+            <button (click)="toggleTheme()" [class.dark-theme]="currentTheme === 'dark'" [class.light-theme]="currentTheme === 'light'">
+                Toggle Theme
+            </button>
+        </div>
+        <app-note-create></app-note-create>
+        <app-note-list></app-note-list>
+        <section class="logs-section">
+            <ul>
+                @for(msg of logMessages; track msg){
+                <li>{{msg}}</li>
+                }
+            </ul>
+        </section>

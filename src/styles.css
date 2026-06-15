@@ -1,1 +1,184 @@
 /* You can add global styles to this file, and also import other style files */
+body, h1, h2, ul, li, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.light-theme {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+body.dark-theme {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #ccc;
+    background-color: #333;
+    padding: 20px;
+}
+
+h2 {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h1.light-theme {
+    color: #555; 
+}
+
+h1.dark-theme {
+    color: #555; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+li.dark-theme {
+    background-color: #444;
+    border-color: #666;
+}
+
+div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+div.dark-theme {
+    background-color: #444;
+    box-shadow: 0 0 10px 0 rgba(255,255,255,0.1);
+}
+
+
+textarea {
+    height: 100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+    width: calc(100% - 15px);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.noteCreate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.dark-theme {
+    background-color: #666;
+}
+
+button.dark-theme:hover {
+    background-color: #444;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.dark-theme {
+    background-color: #666;
+}
+
+button.dark-theme:hover {
+    background-color: #444;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note-item details {
+    width: 80%;
+    margin-right: 10px;
+}
+
+.note-item summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.note-item p {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    max-width: 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
