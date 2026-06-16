@@ -19,7 +19,6 @@ export class AuthService {
     } else {
       this.loggerService.log(`Authentication failed for username: ${username}`);
       return false;
-
     }
   }
 }
