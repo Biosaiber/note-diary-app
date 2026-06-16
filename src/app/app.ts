@@ -4,10 +4,11 @@ import { NoteListComponent } from './note-list/note-list.component';
 import { LoggerService } from './logger.service';
 import { UserPreferencesService } from './user-preferences.service';
 import { AuthService } from './auth.service';
+import { TruncatePipe } from './truncate.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [NoteCreateComponent, NoteListComponent,],
+  imports: [NoteCreateComponent, NoteListComponent, TruncatePipe ],
   providers: [UserPreferencesService],
   templateUrl: './app.html',
   styleUrl: './app.css'

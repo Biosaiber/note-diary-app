@@ -15,7 +15,7 @@
         <section class="logs-section">
             <ul>
                 @for(msg of logMessages; track msg){
-                <li>{{msg}}</li>
+                <li>{{msg | truncatePipe: 30}}</li>
                 }
             </ul>
         </section>
